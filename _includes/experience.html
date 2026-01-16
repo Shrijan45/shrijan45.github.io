@@ -1,0 +1,22 @@
+<div id="experience">
+    <h2 class="heading"> Work Experience</a> <i class="fa fa-suitcase" aria-hidden="true"></i></h2>
+    <div id="experience-timeline">
+    {% for company in site.data.experience %}
+        <div data-date="{{ company.date }}">
+            <h3>{{ company.name }}</h3>
+            <h4>{{ company.designation }}</h4>
+            <p>
+                <ul>
+                    {% for description in company.descriptions %}
+                    <li>
+                        {{ description }}
+                    </li>
+                    {% endfor %}
+                </ul>
+            </p>
+        </div>
+    {% endfor %}
+    </div>
+</div>
+
+<!-- End #experience -->

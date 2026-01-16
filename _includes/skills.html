@@ -1,0 +1,9 @@
+<div id="skills">
+    <h2 class="heading">Skills <i class="fa fa-cogs" aria-hidden="true"></i></h2>
+    <ul>
+        {% for skill in site.data.skills %}
+        <li>{{ skill.name }}</li>
+        {% endfor %}
+    </ul>
+</div>
+<!-- End #skills -->

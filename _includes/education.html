@@ -1,0 +1,23 @@
+<div id="education" class="background-alt">
+    <h2 class="heading">Education <i class="fa fa-graduation-cap" aria-hidden="true"></i></h2>
+    {% for college in site.data.education %}
+    <div class="education-block">
+        <h3>{{ college.specialization }}</h3>
+        <span class="education-date">{{ college.year }}</span>
+        <h4>{{ college.name }}</h4>
+        <h4><strong>{{ college.result }}</strong></h4>
+        <p>
+            <strong>Modules</strong> : 
+            <ul>
+                {% for course in college.courses %}
+                <li>
+                    {{ course }}
+                </li>
+                {% endfor %}
+            </ul>
+        </p>
+    </div>
+    {% endfor %}
+    <!-- End .education-block -->
+</div>
+<!-- End #education -->
